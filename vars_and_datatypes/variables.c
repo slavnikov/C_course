@@ -6,8 +6,8 @@ int main() {
   char f, a, l, o, u, t;
   //followed by initialization
   f = 'f', a = 'a';
-  l = 'l';
-  o = 'o';
+  l = '1';
+  o = '0';
   u = 'u';
   t = 't';
 
@@ -22,9 +22,11 @@ int main() {
 
   /*
    int - may take b/w 32 and 64 bits of of memory (4-8 bytes)
-       - is signed
+       - is signed (unless unsigned)
        - can store hexidecimals 0xFFEF0D
        - no commas are allowed
+       - longer than a short
+       - shorter than a long which is shorter than a longlong
   */
   /*
    float - flating points
@@ -34,20 +36,37 @@ int main() {
   */
   /*
    double - bigger than a float
+          - shorter than long doubles
   */
   /*
     _Bool - 0 or 1
           - true or false
   */
+  /*
+    Enum - specified a datatype of a specified set of valid values
+  */
 
+  enum Game {
+    MORROWIND = 3,
+    OBLIVION,
+    SKYRIM
+  };
+
+  enum Game game = SKYRIM;
   int one = 1;
   float one_point_three = 1.3;
   double one_billion = 1e9;
   bool not_false = true;
+  char newline = '\n';
+  char ding = '\a';
 
-  if(not_false) {
-    printf("%f\n", one_point_three);
+  if(game == SKYRIM && not_false) {
+    printf("%f%c", one_point_three, newline);
+  }
+  if(game == 5 && one == 1) {
+    printf("%f%c", one_billion, newline);
   }
 
+  printf("%c", ding);
   return 0;
 }
