@@ -15,6 +15,7 @@ int main(int argc, char const *argv[]) {
 
   const char foo[] = "foo";
   char baz[] = {foo}; // baz gets placed right behind the bar array w/ a length of 1 to allow only for the \0 char
+                      // question: why does it get placed right before bar and not foo
   baz[0] = 'b'; // overwrites baz's \0
   baz[1] = 'a'; // overwrites bar's b
   baz[2] = 'z'; // overwrites bar's a
