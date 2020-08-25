@@ -2,12 +2,12 @@
 #include <string.h>
 #include <stdbool.h>
 
-int my_strlen(char string[]);
-void my_strcat(char dst_str[], char src_str[]);
-bool my_strcmp(char str1[], char str2[]);
+int my_strlen(const char string[]);
+void my_strcat(char dst_str[], const char src_str[]);
+bool my_strcmp(const char str1[], const char str2[]);
 
 int main(int argc, char *argv[]) {
-  char *input = argv[1];
+  const char *input = argv[1];
   if(input == NULL) {
     printf("%s\n", "No input detected.");
     return 0;
@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 
   char dst_str1[13] = "Hello";
   char dst_str2[13] = "Hello";
-  char src_str[] = " World!";
+  const char src_str[] = " World!";
   strcat(dst_str1, src_str);
   my_strcat(dst_str2, src_str);
 
@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-int my_strlen(char string[]) {
+int my_strlen(const char string[]) {
   int length = 0;
 
   while(string[length] != '\0') {
@@ -56,7 +56,7 @@ int my_strlen(char string[]) {
   return length;
 }
 
-void my_strcat(char dst_str[], char src_str[]) {
+void my_strcat(char dst_str[], const char src_str[]) {
   int dst_idx = my_strlen(dst_str);
   int src_idx = 0;
 
@@ -68,7 +68,7 @@ void my_strcat(char dst_str[], char src_str[]) {
   dst_str[dst_idx] = '\0';
 }
 
-bool my_strcmp(char str1[], char str2[]) {
+bool my_strcmp(const char str1[], const char str2[]) {
   int idx = 0;
 
   while(true) {
