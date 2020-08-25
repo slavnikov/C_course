@@ -7,7 +7,7 @@ void my_strcat(char dst_str[], const char src_str[]);
 bool my_strcmp(const char str1[], const char str2[]);
 
 int main(int argc, char *argv[]) {
-  const char *input = argv[1];
+  char *input = argv[1];
   if(input == NULL) {
     printf("%s\n", "No input detected.");
     return 0;
@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 
   char dst_str1[13] = "Hello";
   char dst_str2[13] = "Hello";
-  const char src_str[] = " World!";
+  char src_str[] = " World!";
   strcat(dst_str1, src_str);
   my_strcat(dst_str2, src_str);
 
