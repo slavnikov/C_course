@@ -5,11 +5,6 @@ void power_bang(int *input, int power);
 bool test_power_bang(void);
 
 int main(int argc, char const *argv[]) {
-  // int *input = NULL;
-
-  // printf("%s\n", "Input a number to square:\n>");
-  // scanf("%d", input);
-
   if(test_power_bang()) {
     printf("%s\n", "The function works.");
   } else {
@@ -36,12 +31,13 @@ void power_bang(int *input, int power) {
 bool test_power_bang() {
   bool pass = true;
   int five = 5;
-  int two = 2;
   int hundred = 100;
   int three = 3;
+  int two = 2;
+  int *pTwo = &two;
 
   power_bang(&five, 3);
-  power_bang(&two, 5);
+  power_bang(pTwo, 5);
   power_bang(&hundred, 0);
   power_bang(&three, -2);
 
