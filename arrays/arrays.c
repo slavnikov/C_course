@@ -10,8 +10,12 @@ int main(int argc, char const *argv[]) {
   //variable length arrays (don't get your hopes up)
   // these arrays will not change length, but can be declared with a variable as a size
   // these cannot be initialized in their declaration
+  int three_num = 3;
+  float eleven[three_num];
 
-  float eleven[5*2 + 1];
-  
+  eleven[0] = 123.123;
+  eleven[1] = 456.456;
+  eleven[2] = 789.789;
+
   return 0;
 }
