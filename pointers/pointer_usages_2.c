@@ -14,17 +14,18 @@ int main(int argc, char const *argv[]) {
   int number2 = 2;
   int *pNumber = &number;
 
-  number = 10; // not allowed
-  *pNumber = 87; // allowed
-  pNumber = &number2; // allowed
+  number = 10; // not allowed    << chnages the value under the variable name
+  *pNumber = 87; // allowed      << change the value at the pointed to address
+  pNumber = &number2; // allowed << changes the address being pointed to
 ////////////////////////////////////////////////////////////////////////////////
   char a = 'a';
   char b = 'b';
   char *const pChar = &a;
 
-  a = 'c'; // allowed
-  b = 'd'; // allowed
-  pChar = &b; // not allowed
+  a = 'c'; // allowed        << chnages the value under the variable name
+  b = 'd'; // allowed        << chnages the value under the variable name
+  pChar = &b; // not allowed << chnage the address being pointed to
+  *pChar = b; // allowed     << change the value at the address
 ////////////////////////////////////////////////////////////////////////////////
   const char c  = 'c';
   const char d = 'd';

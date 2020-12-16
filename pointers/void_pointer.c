@@ -4,7 +4,7 @@
 int main(int argc, char const *argv[]) {
   //void* pointers can contain the address of any data item
   //void* can be userd a parameter or a return value of a function
-  //void* must be case first before it can be dereferenced
+  //void* must be cast first before it can be dereferenced
 
   int x_int = 10;
   char  x_char = 'x';
