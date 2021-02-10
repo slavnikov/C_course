@@ -84,7 +84,7 @@ void fillDeck(struct Deck *deck) {
   for (enum Suit suit = SPADES; suit <= DIAMONDS; suit++) {
     for (short val = 2; val <= 14; val++) {
       struct PlayingCard card_to_add = {suit};
-      struct PlayingCard *card_to_add_ptr = malloc(sizeof(struct PlayingCard));
+      struct PlayingCard *card_to_add_ptr = (struct PlayingCard *) malloc(sizeof(struct PlayingCard));
 
       switch (val) {
         case 10:
